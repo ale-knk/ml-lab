@@ -1,0 +1,43 @@
+[build-system]
+requires = [
+    "setuptools>=61.0",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mllab"
+
+version = "0.1.0"
+
+description = "A MLOps platform for training and evaluating machine learning models."
+
+readme = "README.md"
+
+license = { text = "MIT" }
+
+authors = [
+    { name = "Alejandro Requena Bermejo", email = "rb.jandro@gmail.com" }
+]
+
+dependencies = [
+    "mlflow==2.10.0",
+    "psycopg2-binary==2.9.10",
+    "python-dotenv==1.0.1",
+    "dash==2.14.0",
+    "dash-bootstrap-components==1.4.1",
+    "dash-core-components==2.1.0",
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Repository" = "https://github.com/ale-knk/ml-lab"
+
+[tool.setuptools.packages.find]
+include = ["src"]
+exclude = ["data", "output"]
